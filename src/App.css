@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+  --body-color: #03061C
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+}
+body{
+  background-color: var(--body-color);
+}
+.common-gradient{
+  background: #333352;
+  background: linear-gradient(306deg, rgba(51, 51, 82, 1) 0%, rgba(25, 25, 52, 1) 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-two{
+  transform: translateX(-12px);
+}
+.image-three{
+  transform: translateX(-20px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-gradient{
+  background: #BBA5F4;
+  background: linear-gradient(181deg,rgba(187, 165, 244, 1) 0%, rgba(95, 51, 214, 1) 100%);
+}
+.line{
+      position: absolute;
+    content: "";
+    width: 100px;
+    height: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: -33px;
+    background-color: #110A2B;
+    z-index: -1;
+}
+.ai-gradient{
+  background: linear-gradient(6deg,rgba(187, 165, 244, 1) 0%, rgba(101, 58, 216, 1) 100%);
 }
 
-.App-link {
-  color: #61dafb;
+.tooglebtn::before{
+  background-image: url(./assets/images/png/startbtn.png);
+  background-repeat: no-repeat;
+  background-size: 76px;
+  background-color: unset!important; 
+}
+.blue-linearHeading {
+  background: linear-gradient(91deg, rgba(245, 241, 255, 1) 0%, rgba(102, 51, 238, 1) 100%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+}
+.create-promt{
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color:#b2a1fd2b;
+}
+.leftImg{
+  transform: translateX(5px);
+}
+.rightImg{
+    transform: translateX(-5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-curve {
+    --r: 26px;
+    --s: 174px;
+    --a: 5deg;
+    --p: 50%;
+    min-height: 450px;
+    aspect-ratio: 3 / 2;
+    border-radius: var(--r);
+    --_m: calc(100% - var(--r)), #000 calc(100% - 1px), #0000;
+    --_d: (var(--s) + var(--r)) * cos(var(--a));
+    mask: radial-gradient(var(--r) at calc(var(--p) + var(--_d)) var(--_m)), radial-gradient(var(--r) at calc(var(--p) - var(--_d)) var(--_m)), radial-gradient(var(--s) at var(--p) calc(100% + sin(var(--a)) * var(--s)), #0000 100%, #000 calc(100% + 1px)) 0 calc(var(--r) * (sin(var(--a)) - 1)) no-repeat, linear-gradient(90deg, #000 calc(var(--p) - var(--_d)), #0000 0 calc(var(--p) + var(--_d)), #000 0);
+}
+
+.card-gradient{
+  background: #BBA5F4;
+  background: linear-gradient(179deg, rgba(187, 165, 244, 1) 0%, rgba(101, 58, 216, 1) 100%);
+  width: 50%;
+  margin: 0 0 0 auto;
+}
+.column:nth-child(even){
+    /* text-align: right; */
+}
+.box-data{
+  max-width: 900px;
+  margin: auto;
+}
+
+.divider{
+    background: #000000;
+  background: linear-gradient(172deg, rgba(0, 0, 0, 1) 0%, rgba(85, 42, 203, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    width: 3px;
+    position: absolute;
+    top: 0;
+    height: 500px;
+    right: 0;
+    left: -70px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.circle{
+      width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    background-color: #9A73FD;
+    top: -70px;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    left: -13px;
+}
+
+@media  screen and (max-width: 768px) {
+    .inner-curve {
+    --r: 16px;
+    --s: 153px;
+    --a: 5deg;
+    --p: 50%;
+    min-height: 450px;
+    aspect-ratio: 3 / 2;
+    border-radius: var(--r);
+    --_m: calc(100% - var(--r)), #000 calc(100% - 1px), #0000;
+    --_d: (var(--s) + var(--r)) * cos(var(--a));
+    mask: radial-gradient(var(--r) at calc(var(--p) + var(--_d)) var(--_m)), radial-gradient(var(--r) at calc(var(--p) - var(--_d)) var(--_m)), radial-gradient(var(--s) at var(--p) calc(100% + sin(var(--a)) * var(--s)), #0000 100%, #000 calc(100% + 1px)) 0 calc(var(--r) * (sin(var(--a)) - 1)) no-repeat, linear-gradient(90deg, #000 calc(var(--p) - var(--_d)), #0000 0 calc(var(--p) + var(--_d)), #000 0);
+}
 }

@@ -1,0 +1,8 @@
+.ai-promt{
+    background-image: url(../../assets/images/png/Sphere-one.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 100vh;   
+    background-position: center;
+    padding: 70px;
+}
