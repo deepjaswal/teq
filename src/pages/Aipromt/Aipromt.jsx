@@ -2,12 +2,15 @@ import React from 'react'
 import "./Airpromt.css"
 import cardframeone from "../../assets/images/png/cardframeone.png"
 import cross from "../../assets/images/png/crossIcon.png"
+import { Link } from 'react-router-dom'
 const Aipromt = () => {
   return (
     <div className='w-full ai-promt '>
         <div className='w-full'>
             <div className='cross-icons absolute right-4 top-6'>
+              <Link to= "/">
                 <img src={cross}/>
+              </Link>
             </div>
             <div className='w-full box-data'> 
               <div className='column'>
