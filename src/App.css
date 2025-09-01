@@ -137,3 +137,40 @@ body{
     mask: radial-gradient(var(--r) at calc(var(--p) + var(--_d)) var(--_m)), radial-gradient(var(--r) at calc(var(--p) - var(--_d)) var(--_m)), radial-gradient(var(--s) at var(--p) calc(100% + sin(var(--a)) * var(--s)), #0000 100%, #000 calc(100% + 1px)) 0 calc(var(--r) * (sin(var(--a)) - 1)) no-repeat, linear-gradient(90deg, #000 calc(var(--p) - var(--_d)), #0000 0 calc(var(--p) + var(--_d)), #000 0);
 }
 }
+
+.tabbings:nth-child(even) {
+   margin: 0 0 0 auto
+
+}
+
+.tabbings{
+  filter: blur(2px);
+background: rgba(255, 255, 255, 0.1); /* transparent white */
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(12px); /* frosted blur */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* soft shadow */
+  color: white;
+}
+.tab-active{
+  transform: scale(1.2)!important;
+  transition: all 0.5s ease;
+  filter: unset!important;
+    background: #BBA5F4;
+  background: linear-gradient(179deg, rgba(187, 165, 244, 1) 0%, rgba(101, 58, 216, 1) 100%);
+
+}
+.tabbing-btns{
+  margin-bottom:190px!important;
+}
+.tabbing-btns > div{
+  position: relative;
+}
+
+.active-tab{
+ background: #BBA5F4;
+  background: linear-gradient(179deg, rgba(187, 165, 244, 1) 0%, rgba(101, 58, 216, 1) 100%);
+  opacity: 1;
+}
